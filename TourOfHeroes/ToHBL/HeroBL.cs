@@ -4,18 +4,22 @@ using ToHDL;
 using ToHModels;
 namespace ToHBL
 {
-    public class HeroBL : HeroBL
+    public class HeroBL : IHeroBL
     {
-        private IHeroRepository repo = new HeroRepoSC();
+        private IHeroRepository _repo;
 
+        public HeroBL(IHeroRepository repo)
+        {
+            _repo = repo;
+        }
         public void AddHero(Hero newHero)
         {    // TODO: add BL
-            repo.AddHero(newHero);
+            _repo.AddHero(newHero);
         }
 
         public List<Hero> GetHeroes()
         {    // TODO: add BL
-            return repo.GetHeroes();
+            return _repo.GetHeroes();
         }
     }
 }

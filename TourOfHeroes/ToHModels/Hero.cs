@@ -23,14 +23,15 @@ namespace ToHModels
     /// </summary>
     public class Hero
     {
-        private String heroName;
-        private int hP; 
+        private String heroName; 
 
         public String HeroName
         {
         get{return heroName;}
-        set {
-            if(value.Equals(null)) {} // TODO: through exception
+        set 
+        {
+            if(value.Equals(null)) 
+            {} // TODO: throw exception
             heroName = value;
 
         }
@@ -41,5 +42,8 @@ namespace ToHModels
     public Element ElementType {get; set;}
 
     public SuperPower SuperPower {get; set;}
+
+    public override string ToString() => $"Hero Details: \n\t name: {this.HeroName} \n\t hp: {this.HP} \n\t element: {this.ElementType} \n\t superpower: {this.SuperPower.ToString()}";
+
     }
 }
