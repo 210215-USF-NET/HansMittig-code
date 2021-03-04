@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ToHDL
+namespace CalcClass
 {
     public class Class1
     {

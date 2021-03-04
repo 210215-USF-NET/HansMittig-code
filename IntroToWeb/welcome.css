@@ -1,0 +1,10 @@
+.aboutme,
+.arel{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+.aboutme:hover, .arel:hover{
+    font-family: Arial, Helvetica, sans-serif,
+    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+}

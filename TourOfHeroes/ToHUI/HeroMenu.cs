@@ -29,9 +29,9 @@ namespace ToHUI
                     try
                     {CreateHero();
                     }
-                    catch(Exception)
+                    catch(Exception e)
                     {
-                        Console.WriteLine("Invalid input");
+                        Console.WriteLine("Invalid input" + e.Message);
                         continue;
                     }
                     break;
@@ -60,18 +60,18 @@ namespace ToHUI
             newHero.HP = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter SuperPower details");
             SuperPower newSuperPower = new SuperPower();
-            Console.WriteLine("Enter SuperPower name: ");
-            newHero.SuperPower.Name = Console.ReadLine();
-            Console.WriteLine("Enter SuperPower description: ");
-            newHero.SuperPower.Description = Console.ReadLine();
-            Console.WriteLine("Enter SuperPower damage: ");
-            newHero.SuperPower.Damage = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter SuperPower name:");
+            newSuperPower.Name = Console.ReadLine();
+            Console.WriteLine("Enter SuperPower description");
+            newSuperPower.Description = Console.ReadLine();
+            Console.WriteLine("Enter SuperPower damage");
+            newSuperPower.Damage = int.Parse(Console.ReadLine());
             newHero.SuperPower = newSuperPower;
-            Console.WriteLine("Set the element type of the hero: ");
+            Console.WriteLine("Set the element of the hero: ");
             newHero.ElementType = Enum.Parse<Element>(Console.ReadLine());
 
             _heroBL.AddHero(newHero);
-            Console.WriteLine($"Hero has been created successfully: ");
+            Console.WriteLine("Hero created successfully.");
         }
         public void GetHeroes()
         {
